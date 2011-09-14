@@ -13,7 +13,7 @@ public class CaseCompanie extends CaseAchetable{
 		}
 
 		else {
-			 setloyer(600*dernierLance*this.Proprietaire.getnb_compagnie());
+			setLoyer(600*dernierLance*this.Proprietaire.getNbCompagnie());
 		}
 }
 
