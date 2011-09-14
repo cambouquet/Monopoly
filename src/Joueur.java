@@ -39,6 +39,32 @@ public void setFortune(int fortune) {
 	this.fortune = fortune;
 }
 
+public String afficheCaseJoueur()
+{
+	String retour = new String();
+	String limiteHor = "+------------------+\n";
+	retour += limiteHor;
+	retour += this.Position.getNom() + "\n";
+	if (this.Position.getLibre())
+	{
+		retour += "La case est libre.\n";
+		retour += "Prix = " + this.Position.getPrixAchat() + "\n";
+	}
+	else
+	{
+		retour += "La case est occupée.\n";
+		retour += "Loyer = " + this.Position.calculerLoyer() + "\n";
+	}
+	retour += limiteHor;
+	retour += this.nom + "\n";
+	retour += limiteHor;
+	retour += "Fortune: " + this.Fortune + "\n";
+	retour += "Nb gares: " + this.nbGare + "\n";
+	retour += "Nb compagnies: " + this.nbCompagnie + "\n";
+	retour += limiteHor;
+	return retour;
+}
+
 
 public void payer(Joueur joueur) throws  NoMoreMoney
 	  {  

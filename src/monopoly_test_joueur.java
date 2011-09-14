@@ -11,9 +11,10 @@ public class monopoly_test_joueur {
 		int occurence6 = 0;
 		double tolerance = 0.1; 
 		boolean failed = false;
+		int MAX_ITER = 100000;
 		
 		Joueur joueurTest =  new Joueur("Test_Eric");
-		for (int i = 0; i < 100000 &&  !failed; i++){
+		for (int i = 0; i < MAX_ITER &&  !failed; i++){
 			switch(joueurTest.lanceLeDe()){
 			case 1 : 
 				occurence1 ++;
@@ -39,6 +40,14 @@ public class monopoly_test_joueur {
 			}
 		}
 
-if (failed) return 0 // Un 
+if (failed) return 0; // Uncorrect value 
+if (Math.abs(occurence1- MAX_ITER/6)>tolerance*MAX_ITER
+		||Math.abs(occurence1- MAX_ITER/6)>tolerance*MAX_ITER
+		|| Math.abs(occurence1- MAX_ITER/6)>tolerance*MAX_ITER
+		|| Math.abs(occurence1- MAX_ITER/6)>tolerance*MAX_ITER
+		|| Math.abs(occurence1- MAX_ITER/6)>tolerance*MAX_ITER
+		|| Math.abs(occurence1- MAX_ITER/6)>tolerance*MAX_ITER
+		)
+	return 1; // Répartition non uniforme
 	}
 }
