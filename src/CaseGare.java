@@ -13,7 +13,7 @@ public class CaseGare extends CaseAchetable{
 		   		 setLoyer(0);
 		   	 }
 		   	 else {
-		   	 setloyer(2500*this.Proprietaire.getNbGare());
+		   	 setLoyer(2500*this.Proprietaire.getNbGare());
 		   	 }
 	
 	   }
