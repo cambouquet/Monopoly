@@ -8,7 +8,7 @@ public class CaseConstructible extends CaseAchetable {
 	public CaseConstructible(String nom, int prixachat, int prixmaison,
 			int prixhotel, int loyermaison, int loyerhotel) {
 		this.Nom = nom;
-		this.Prixachat = prixachat;
+		this.prixAchat = prixachat;
 		this.nbMaisons = 0;
 		this.nbHotels = 0;
 		this.loyerMaison = loyermaison;
@@ -24,10 +24,10 @@ public class CaseConstructible extends CaseAchetable {
 		// On ajoute les nouvelles maisons
 		this.nbMaisons = this.nbMaisons + nbMaisonAConstruire;
 
-		// On ajoute les niouveaux hotels à construireMaison
+		// On ajoute les niouveaux hotels ï¿½ construireMaison
 		this.nbHotels = this.nbHotels + nbHotelAConstruire;
 
-		// On met à jour le loyer
+		// On met ï¿½ jour le loyer
 		this.calculerLoyer();
 	}
 
@@ -35,9 +35,9 @@ public class CaseConstructible extends CaseAchetable {
 	public void calculerLoyer() {
 
 		if (nbMaisons == 0 && nbHotels == 0) {
-			Loyer = Prixachat / 10;
+			loyer = prixAchat / 10;
 		} else {
-			Loyer = loyerMaison * nbMaisons + loyerHotel * nbHotels;
+			loyer = loyerMaison * nbMaisons + loyerHotel * nbHotels;
 		}
 	}
 

@@ -1,12 +1,12 @@
 package fr.ei3info;
 public class CaseAchetable extends Case {
 
-	protected Joueur Proprietaire;
-	protected int Loyer;
-	protected int Prixachat;
+	protected Joueur proprietaire;
+	protected int loyer;
+	protected int prixAchat;
 
 	public boolean estLibre() {
-		if (Proprietaire == null) {
+		if (proprietaire == null) {
 			return true;
 		} else {
 			return false;
@@ -14,27 +14,27 @@ public class CaseAchetable extends Case {
 	}
 
 	public Joueur getProprietaire() {
-		return Proprietaire;
+		return proprietaire;
 	}
 
 	public void setProprietaire(Joueur proprietaire) {
-		Proprietaire = proprietaire;
+		this.proprietaire = proprietaire;
 	}
 
 	public int getLoyer() {
-		return Loyer;
+		return loyer;
 	}
 
 	public void setLoyer(int loyer) {
-		Loyer = loyer;
+		this.loyer = loyer;
 	}
 
 	public int getPrixachat() {
-		return Prixachat;
+		return prixAchat;
 	}
 
-	public void setPrixachat(int prixachat) {
-		Prixachat = prixachat;
+	public void setPrixachat(int prixAchat) {
+		this.prixAchat = prixAchat;
 	}
 
 }
